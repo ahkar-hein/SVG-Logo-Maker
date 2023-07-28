@@ -28,3 +28,7 @@ const questions = [
         message: 'Enter shape color for the logo.',
     },
 ];
+
+inquirer.prompt(questions).then((answers) => {
+    const { logoName, color, shapeType, shapeColor } = answers;
+});
