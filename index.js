@@ -31,5 +31,20 @@ const questions = [
 
 inquirer.prompt(questions).then((answers) => {
     const { logoName, color, shapeType, shapeColor } = answers;
- 
+    let shape;
+
+    switch (shapeType.toLowerCase()) {
+        case 'circle':
+            shape = new Circle(color, logoName ,shapeColor);
+            break;
+        case 'triangle':
+            shape = new Triangle(color, logoName, shapeColor);
+            break;
+        case 'square':
+            shape = new Square(color, logoName, shapeColor);
+            break;
+        default:
+            console.log('Invalid shape type.');
+            return;
+    }
 });
