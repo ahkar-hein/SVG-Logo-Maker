@@ -31,4 +31,5 @@ const questions = [
 
 inquirer.prompt(questions).then((answers) => {
     const { logoName, color, shapeType, shapeColor } = answers;
+ 
 });
