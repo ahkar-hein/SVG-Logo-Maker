@@ -1,0 +1,4 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="150, 30 75, 170 225, 170" fill="Green" />
+<text x="150" y="125" font-size="30" text-anchor="middle" fill="Brown">IGN</text>
+  </svg>
