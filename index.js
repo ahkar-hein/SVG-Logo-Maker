@@ -47,4 +47,15 @@ inquirer.prompt(questions).then((answers) => {
             console.log('Invalid shape type.');
             return;
     }
+    const svg = `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+    ${shape.render()}
+  </svg>`;
+
+  fs.writeFile(logoFilePath, svg, (err) => {
+      if (err) {
+          console.error('Error saving the SVG file:', err);
+          return;
+      }
+      console.log('Generated logo.svg');
+  });
 });
