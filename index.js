@@ -10,6 +10,12 @@ const questions = [
         type: 'input',
         name: 'logoName',
         message: 'Enter text for the logo. (No more than 3 letters)',
+        validate: function (input) {
+            if (input.length <= 3) {
+                return true;
+            }
+            return 'Please enter no more than 3 letters.';
+        }
     },
     {
         type: 'input',
